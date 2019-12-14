@@ -10,6 +10,11 @@
 		E92E7AA923A550E800B495EE /* Frameworks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E92E7A9F23A550E800B495EE /* Frameworks.framework */; };
 		E92E7AAE23A550E800B495EE /* FrameworksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92E7AAD23A550E800B495EE /* FrameworksTests.swift */; };
 		E92E7AB023A550E800B495EE /* Frameworks.h in Headers */ = {isa = PBXBuildFile; fileRef = E92E7AA223A550E800B495EE /* Frameworks.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E92E7AC923A5513D00B495EE /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92E7AC423A5513D00B495EE /* CoreDataManager.swift */; };
+		E92E7ACA23A5513D00B495EE /* CoreDataUser+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92E7AC523A5513D00B495EE /* CoreDataUser+CoreDataProperties.swift */; };
+		E92E7ACB23A5513D00B495EE /* FrameworksModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E92E7AC623A5513D00B495EE /* FrameworksModel.xcdatamodeld */; };
+		E92E7ACC23A5513D00B495EE /* CoreDataUser+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92E7AC823A5513D00B495EE /* CoreDataUser+CoreDataClass.swift */; };
+		E92E7ACF23A5514600B495EE /* CoreDataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92E7ACE23A5514500B495EE /* CoreDataManagerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +34,11 @@
 		E92E7AA823A550E800B495EE /* FrameworksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FrameworksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E92E7AAD23A550E800B495EE /* FrameworksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworksTests.swift; sourceTree = "<group>"; };
 		E92E7AAF23A550E800B495EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E92E7AC423A5513D00B495EE /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		E92E7AC523A5513D00B495EE /* CoreDataUser+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreDataUser+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E92E7AC723A5513D00B495EE /* FrameworksModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FrameworksModel.xcdatamodel; sourceTree = "<group>"; };
+		E92E7AC823A5513D00B495EE /* CoreDataUser+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreDataUser+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E92E7ACE23A5514500B495EE /* CoreDataManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManagerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,8 +63,8 @@
 		E92E7A9523A550E700B495EE = {
 			isa = PBXGroup;
 			children = (
-				E92E7AAC23A550E800B495EE /* FrameworksTests */,
 				E92E7AA123A550E800B495EE /* Frameworks */,
+				E92E7AAC23A550E800B495EE /* FrameworksTests */,
 				E92E7AA023A550E800B495EE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,6 +81,7 @@
 		E92E7AA123A550E800B495EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E92E7AC323A5513D00B495EE /* CoreData */,
 				E92E7AA223A550E800B495EE /* Frameworks.h */,
 				E92E7AA323A550E800B495EE /* Info.plist */,
 			);
@@ -80,10 +91,30 @@
 		E92E7AAC23A550E800B495EE /* FrameworksTests */ = {
 			isa = PBXGroup;
 			children = (
+				E92E7ACD23A5514500B495EE /* CoreData */,
 				E92E7AAD23A550E800B495EE /* FrameworksTests.swift */,
 				E92E7AAF23A550E800B495EE /* Info.plist */,
 			);
 			path = FrameworksTests;
+			sourceTree = "<group>";
+		};
+		E92E7AC323A5513D00B495EE /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				E92E7AC423A5513D00B495EE /* CoreDataManager.swift */,
+				E92E7AC523A5513D00B495EE /* CoreDataUser+CoreDataProperties.swift */,
+				E92E7AC623A5513D00B495EE /* FrameworksModel.xcdatamodeld */,
+				E92E7AC823A5513D00B495EE /* CoreDataUser+CoreDataClass.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		E92E7ACD23A5514500B495EE /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				E92E7ACE23A5514500B495EE /* CoreDataManagerTests.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +226,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E92E7AC923A5513D00B495EE /* CoreDataManager.swift in Sources */,
+				E92E7ACA23A5513D00B495EE /* CoreDataUser+CoreDataProperties.swift in Sources */,
+				E92E7ACC23A5513D00B495EE /* CoreDataUser+CoreDataClass.swift in Sources */,
+				E92E7ACB23A5513D00B495EE /* FrameworksModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E92E7ACF23A5514600B495EE /* CoreDataManagerTests.swift in Sources */,
 				E92E7AAE23A550E800B495EE /* FrameworksTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -388,6 +424,7 @@
 		E92E7AB723A550E800B495EE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 33PZEFM56C;
 				INFOPLIST_FILE = FrameworksTests/Info.plist;
@@ -406,6 +443,7 @@
 		E92E7AB823A550E800B495EE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 33PZEFM56C;
 				INFOPLIST_FILE = FrameworksTests/Info.plist;
@@ -452,6 +490,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E92E7AC623A5513D00B495EE /* FrameworksModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E92E7AC723A5513D00B495EE /* FrameworksModel.xcdatamodel */,
+			);
+			currentVersion = E92E7AC723A5513D00B495EE /* FrameworksModel.xcdatamodel */;
+			path = FrameworksModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = E92E7A9623A550E700B495EE /* Project object */;
 }
